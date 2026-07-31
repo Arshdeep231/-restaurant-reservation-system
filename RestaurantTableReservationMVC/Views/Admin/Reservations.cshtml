@@ -1,0 +1,61 @@
+@model List<RestaurantTableReservation.DataTransferObject.ReservationOverviewDto>
+@{
+    ViewData["Title"] = "Reservations";
+}
+<link rel="stylesheet" href="https://cdn.datatables.net/2.3.2/css/dataTables.dataTables.css" />
+
+<div class="page-hero">
+    <p class="page-eyebrow">Reservations overview</p>
+    <h1 class="page-title">All reservations</h1>
+    <p class="page-sub">Search, sort, and review every booking across the dining room.</p>
+</div>
+
+<div class="data-panel">
+    <table id="reservationsTable" class="maison-table display">
+        <thead>
+            <tr>
+                <th>Reservation ID</th>
+                <th>Customer Name</th>
+                <th>Table Number</th>
+                <th>Guests</th>
+                <th>Start &amp; End Time</th>
+                <th>Status</th>
+                <th>Created At</th>
+            </tr>
+        </thead>
+        <tbody>
+        @if (Model != null)
+        {
+            foreach (var item in Model)
+            {
+                var start = item.ReservationDate.ToString("dd MMM yyyy") + " · " + item.StartTime.ToString("HH:mm");
+                var end = item.EndTime.ToString("HH:mm");
+                var created = item.CreateAt.ToString("dd MMM yyyy");
+                var statusClass = item.Status == "Cancelled" ? "badge-cancelled" : "badge-booked";
+                <tr>
+                    <td style="font-size:0.8rem;max-width:120px;word-break:break-all;">@item.Id</td>
+                    <td><strong>@item.CustomerName</strong></td>
+                    <td>@item.TableNumber</td>
+                    <td>@item.NumberOfGuest</td>
+                    <td>@start – @end</td>
+                    <td><span class="badge-status @statusClass">@item.Status</span></td>
+                    <td>@created</td>
+                </tr>
+            }
+        }
+        </tbody>
+    </table>
+</div>
+
+@section Scripts {
+    <script src="https://cdn.datatables.net/2.3.2/js/dataTables.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#reservationsTable').DataTable({
+                order: [[6, 'desc']],
+                pageLength: 10,
+                language: { search: "Search reservations:" }
+            });
+        });
+    </script>
+}

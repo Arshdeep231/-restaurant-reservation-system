@@ -1,0 +1,72 @@
+﻿@model IList<RestaurantTableReservation.DataAccessLayer.Entity.User>
+@{
+    ViewData["Title"] = "Customers";
+}
+<link rel="stylesheet" href="https://cdn.datatables.net/2.3.2/css/dataTables.dataTables.css" />
+
+<div class="page-hero">
+    <p class="page-eyebrow">Customer management</p>
+    <h1 class="page-title">Customers</h1>
+    <p class="page-sub">Approve or reject pending registrations. Only approved customers can sign in.</p>
+</div>
+
+<div class="data-panel">
+    <table id="myTable" class="maison-table display">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Role</th>
+                <th>Status</th>
+                <th>Created At</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        @if (Model != null)
+        {
+            foreach (var data in Model)
+            {
+                var date = data.CreatedDate.ToString("dd MMM yyyy");
+                var statusClass = data.Status switch
+                {
+                    RestaurantTableReservation.DataAccessLayer.Entity.UserStatus.Approved => "badge-approved",
+                    RestaurantTableReservation.DataAccessLayer.Entity.UserStatus.Rejected => "badge-rejected",
+                    _ => "badge-pending"
+                };
+                <tr>
+                    <td><strong>@data.Name</strong></td>
+                    <td>@data.Email</td>
+                    <td>Customer</td>
+                    <td><span class="badge-status @statusClass">@data.Status</span></td>
+                    <td>@date</td>
+                    <td>
+                    @if (data.Status == RestaurantTableReservation.DataAccessLayer.Entity.UserStatus.Pending)
+                    {
+                        @Html.ActionLink("Approve", "ChangeStatus", new { userId = data.Id, userStatus = true }, new { @class = "btn btn-outline-success btn-sm" })
+                        @Html.ActionLink("Reject", "ChangeStatus", new { userId = data.Id, userStatus = false }, new { @class = "btn btn-outline-danger btn-sm" })
+                    }
+                    else
+                    {
+                        <span style="color:var(--muted);font-size:0.85rem;">—</span>
+                    }
+                    </td>
+                </tr>
+            }
+        }
+        </tbody>
+    </table>
+</div>
+
+@section Scripts {
+    <script src="https://cdn.datatables.net/2.3.2/js/dataTables.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#myTable').DataTable({
+                order: [[4, 'desc']],
+                pageLength: 10,
+                language: { search: "Search customers:" }
+            });
+        });
+    </script>
+}

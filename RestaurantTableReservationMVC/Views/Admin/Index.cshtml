@@ -1,0 +1,158 @@
+﻿@model RestaurantTableReservation.DataTransferObject.AdminDto
+@{
+    ViewData["Title"] = "Tables";
+}
+<link rel="stylesheet" href="https://cdn.datatables.net/2.3.2/css/dataTables.dataTables.css" />
+
+<div class="page-toolbar">
+    <div class="page-hero mb-0">
+        <p class="page-eyebrow">Table management</p>
+        <h1 class="page-title">Dining tables</h1>
+        <p class="page-sub">Add, edit, or remove tables. Tables with future reservations cannot be deleted.</p>
+    </div>
+    <button type="button" class="btn btn-brass" data-bs-toggle="modal" onclick="addBtn()" data-bs-target="#staticBackdrop">
+        + Add table
+    </button>
+</div>
+
+<div class="data-panel">
+    <table id="myTable" class="maison-table display">
+        <thead>
+            <tr>
+                <th>Table Number</th>
+                <th>Capacity</th>
+                <th>Is Available</th>
+                <th>Created At</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @if (Model?.TableDto != null)
+            {
+                foreach (var data in Model.TableDto)
+                {
+                    var date = data.CreatedAt.ToString("dd MMM yyyy");
+                    <tr>
+                        <td><strong>@data.TableNumber</strong></td>
+                        <td>@data.Capacity guests</td>
+                        <td>
+                            @if (data.IsAvailable)
+                            {
+                                <span class="badge-status badge-available">Yes</span>
+                            }
+                            else
+                            {
+                                <span class="badge-status badge-unavailable">No</span>
+                            }
+                        </td>
+                        <td>@date</td>
+                        <td>
+                            <button class="btn btn-outline-warning btn-sm" onclick="editBtn('@data.Id')">Edit</button>
+                            <button class="btn btn-outline-danger btn-sm" onclick="deleteBtn('@data.Id')">Delete</button>
+                        </td>
+                    </tr>
+                }
+            }
+        </tbody>
+    </table>
+</div>
+
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="staticBackdropLabel">Add new table</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form asp-action="Create" id="myForm">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <input asp-for="Id" class="form-control" hidden />
+                    <input asp-for="TableNumber" class="form-control" hidden />
+                    <input asp-for="CreatedAt" class="form-control" hidden />
+                    <div class="form-group">
+                        <label asp-for="Capacity">Capacity</label>
+                        <input asp-for="Capacity" class="form-control" min="1" placeholder="Number of guests" />
+                        <span asp-validation-for="Capacity" class="text-danger"></span>
+                    </div>
+                    <div class="form-check form-switch mt-2">
+                        <input class="form-check-input" type="checkbox" role="switch" asp-for="IsAvailable">
+                        <label class="form-check-label" for="IsAvailable">Available for booking</label>
+                    </div>
+                    <div class="modal-footer mt-3 px-0 pb-0">
+                        <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Cancel</button>
+                        <input type="submit" id="submitBtn" value="Save table" class="btn btn-primary" />
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="deletedModel" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5">Delete table</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                Are you sure you want to delete this table? This is only allowed when there are no future reservations.
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Keep table</button>
+                <button type="button" class="btn btn-outline-danger" onclick="confirmDelete()">Delete</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script src="https://cdn.datatables.net/2.3.2/js/dataTables.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#myTable').DataTable({
+                order: [[0, 'asc']],
+                pageLength: 10,
+                language: { search: "Search tables:" }
+            });
+        });
+
+        function addBtn() {
+            $(".field-validation-error").html(" ");
+            $("#myForm")[0].reset();
+            $("#staticBackdropLabel").text("Add new table");
+            $("#submitBtn").val("Save table");
+            $("#myForm").prop('action', '/admin/create');
+        }
+
+        function editBtn(id) {
+            $(".field-validation-error").html(" ");
+            $("#myForm")[0].reset();
+            $("#myForm").prop('action', '/admin/update');
+            $.get("/admin/getbyid/" + id, function (data) {
+                $("#Id").val(data.id);
+                $("#TableNumber").val(data.tableNumber);
+                $("#Capacity").val(data.capacity);
+                $("#CreatedAt").val(data.createdAt);
+                $("#IsAvailable").prop("checked", data.isAvailable);
+                $("#staticBackdrop").modal("show");
+                $("#staticBackdropLabel").text("Edit table " + data.tableNumber);
+                $("#submitBtn").val("Update table");
+            });
+        }
+
+        var confirmDeleteId = null;
+        function deleteBtn(id) {
+            confirmDeleteId = id;
+            $("#deletedModel").modal("show");
+        }
+
+        function confirmDelete() {
+            $.get("/admin/delete/" + confirmDeleteId, function () {
+                window.location.reload();
+            });
+        }
+    </script>
+    @{ await Html.RenderPartialAsync("_ValidationScriptsPartial"); }
+}

@@ -1,0 +1,59 @@
+﻿@model RestaurantTableReservation.DataTransferObject.RegisterDto
+
+@{
+    ViewData["Title"] = "Register";
+}
+
+<div class="auth-shell">
+    <aside class="auth-visual" style="background:
+        linear-gradient(160deg, rgba(11, 43, 34, 0.55) 0%, rgba(11, 43, 34, 0.85) 100%),
+        url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;">
+        <div class="auth-visual-inner">
+            <p class="page-eyebrow" style="color:var(--brass-soft);">Join the guest list</p>
+            <h1 class="auth-brand">Maison<span>.</span></h1>
+            <p class="auth-lead">Register today. An administrator will approve your account before you can book.</p>
+        </div>
+    </aside>
+
+    <section class="auth-panel">
+        <div class="auth-card">
+            <p class="page-eyebrow">Create account</p>
+            <h1>Register</h1>
+            <p class="auth-sub">Your account starts as pending until approved.</p>
+
+            <form asp-action="Register" method="post">
+                <div asp-validation-summary="ModelOnly" class="text-danger mb-2"></div>
+                <div class="form-group">
+                    <label asp-for="Name">Full name</label>
+                    <input asp-for="Name" class="form-control" placeholder="Alex Morgan" autocomplete="name" />
+                    <span asp-validation-for="Name" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Email">Email</label>
+                    <input asp-for="Email" class="form-control" type="email" placeholder="you@email.com" autocomplete="email" />
+                    <span asp-validation-for="Email" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Password">Password</label>
+                    <input asp-for="Password" class="form-control" type="password" placeholder="Min. 8 characters" autocomplete="new-password" />
+                    <span asp-validation-for="Password" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="ConfirmPassword">Confirm password</label>
+                    <input asp-for="ConfirmPassword" class="form-control" type="password" placeholder="Repeat password" autocomplete="new-password" />
+                    <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit registration</button>
+            </form>
+
+            <p class="auth-switch">
+                Already registered?
+                <a asp-action="Login">Sign in</a>
+            </p>
+        </div>
+    </section>
+</div>
+
+@section Scripts {
+    @{ await Html.RenderPartialAsync("_ValidationScriptsPartial"); }
+}

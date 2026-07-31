@@ -1,0 +1,126 @@
+﻿@model RestaurantTableReservation.DataTransferObject.CustomerIndexDto
+@{
+    ViewData["Title"] = "Available Tables";
+    var date = DateTime.Now.ToString("yyyy-MM-dd");
+}
+
+<div class="page-hero">
+    <p class="page-eyebrow">Browse &amp; book</p>
+    <h1 class="page-title">Available tables</h1>
+    <p class="page-sub">Choose a table that fits your party, then reserve your preferred time.</p>
+</div>
+
+@if (Model?.TableData?.data == null || !Model.TableData.data.Any())
+{
+    <div class="empty-state panel">
+        <h3>No tables available</h3>
+        <p>Please check back soon — the dining room is being prepared.</p>
+    </div>
+}
+else
+{
+    <div class="table-grid">
+    @foreach (var item in Model.TableData.data)
+    {
+        <article class="table-card">
+            <div class="table-card-num">@item.TableNumber</div>
+            <div class="table-card-meta">
+                <div>Capacity · <strong>@item.Capacity guests</strong></div>
+                <div>
+                    Available ·
+                    @if (item.IsAvailable)
+                    {
+                        <span class="badge-status badge-available">Yes</span>
+                    }
+                    else
+                    {
+                        <span class="badge-status badge-unavailable">No</span>
+                    }
+                </div>
+            </div>
+            @if (item.IsAvailable)
+            {
+                <button class="btn btn-primary" type="button" onclick="bookSeat('@item.Id')">Book now</button>
+            }
+            else
+            {
+                <button class="btn btn-outline-secondary" type="button" disabled>Unavailable</button>
+            }
+        </article>
+    }
+    </div>
+
+    <div class="pager">
+        @if (Model.TableData.PageNumber > 1)
+        {
+            <a href="?pageNumber=@(Model.TableData.PageNumber - 1)&pageSize=@Model.TableData.PageSize" class="btn btn-outline-ink">&larr; Previous</a>
+        }
+        @if (Model.TableData.PageNumber * Model.TableData.PageSize < Model.TableData.TotalRecord)
+        {
+            <a href="?pageNumber=@(Model.TableData.PageNumber + 1)&pageSize=@Model.TableData.PageSize" class="btn btn-outline-ink">Next &rarr;</a>
+        }
+    </div>
+}
+
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="staticBackdropLabel">Book a table</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form asp-action="Create" id="myForm" method="post">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <input asp-for="Id" class="form-control" hidden />
+                    <input asp-for="TableId" class="form-control" hidden />
+                    <div class="form-group">
+                        <label>Table number</label>
+                        <input id="TableNumber" class="form-control" value="" readonly />
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="ReservationDate">Reservation date</label>
+                        <input asp-for="ReservationDate" class="form-control" type="date" min="@date" />
+                        <span asp-validation-for="ReservationDate" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="StartTime">Start time</label>
+                        <input asp-for="StartTime" class="form-control" type="time" />
+                        <span asp-validation-for="StartTime" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="EndTime">End time</label>
+                        <input asp-for="EndTime" class="form-control" type="time" />
+                        <span asp-validation-for="EndTime" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="NumberOfGuest">Number of guests</label>
+                        <input asp-for="NumberOfGuest" class="form-control" type="number" min="1" />
+                        <span asp-validation-for="NumberOfGuest" class="text-danger"></span>
+                    </div>
+                    <div class="modal-footer mt-2 px-0 pb-0">
+                        <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Cancel</button>
+                        <input type="submit" value="Confirm reservation" class="btn btn-primary" />
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+<script>
+    function bookSeat(id) {
+        $.get("/customer/getbyid/" + id, function (data) {
+            $(".field-validation-error").html(" ");
+            $("#myForm")[0].reset();
+            $("#TableId").val(data.id);
+            $("#TableNumber").val(data.tableNumber);
+            $("#NumberOfGuest").prop("max", data.capacity);
+            $("#staticBackdropLabel").text("Book table " + data.tableNumber);
+            $("#staticBackdrop").modal("show");
+        });
+    }
+</script>
+    @{ await Html.RenderPartialAsync("_ValidationScriptsPartial"); }
+}

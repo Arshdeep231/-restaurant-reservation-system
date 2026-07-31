@@ -1,0 +1,30 @@
+C:\Users\admin\Desktop\Happy Panchal\Core\Day_2\RestaurantTableReservation\RestaurantTableReservation.DataTransferObject\bin\Debug\net8.0\RestaurantTableReservation.DataTransferObject.deps.json
+C:\Users\admin\Desktop\Happy Panchal\Core\Day_2\RestaurantTableReservation\RestaurantTableReservation.DataTransferObject\bin\Debug\net8.0\RestaurantTableReservation.DataTransferObject.dll
+C:\Users\admin\Desktop\Happy Panchal\Core\Day_2\RestaurantTableReservation\RestaurantTableReservation.DataTransferObject\bin\Debug\net8.0\RestaurantTableReservation.DataTransferObject.pdb
+C:\Users\admin\Desktop\Happy Panchal\Core\Day_2\RestaurantTableReservation\RestaurantTableReservation.DataTransferObject\bin\Debug\net8.0\RestaurantTableReservation.DataAccessLayer.dll
+C:\Users\admin\Desktop\Happy Panchal\Core\Day_2\RestaurantTableReservation\RestaurantTableReservation.DataTransferObject\bin\Debug\net8.0\RestaurantTableReservation.DataAccessLayer.pdb
+C:\Users\admin\Desktop\Happy Panchal\Core\Day_2\RestaurantTableReservation\RestaurantTableReservation.DataTransferObject\obj\Debug\net8.0\RestaurantTableReservation.DataTransferObject.csproj.AssemblyReference.cache
+C:\Users\admin\Desktop\Happy Panchal\Core\Day_2\RestaurantTableReservation\RestaurantTableReservation.DataTransferObject\obj\Debug\net8.0\RestaurantTableReservation.DataTransferObject.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\admin\Desktop\Happy Panchal\Core\Day_2\RestaurantTableReservation\RestaurantTableReservation.DataTransferObject\obj\Debug\net8.0\RestaurantTableReservation.DataTransferObject.AssemblyInfoInputs.cache
+C:\Users\admin\Desktop\Happy Panchal\Core\Day_2\RestaurantTableReservation\RestaurantTableReservation.DataTransferObject\obj\Debug\net8.0\RestaurantTableReservation.DataTransferObject.AssemblyInfo.cs
+C:\Users\admin\Desktop\Happy Panchal\Core\Day_2\RestaurantTableReservation\RestaurantTableReservation.DataTransferObject\obj\Debug\net8.0\RestaurantTableReservation.DataTransferObject.csproj.CoreCompileInputs.cache
+C:\Users\admin\Desktop\Happy Panchal\Core\Day_2\RestaurantTableReservation\RestaurantTableReservation.DataTransferObject\obj\Debug\net8.0\Restaura.274C0FB5.Up2Date
+C:\Users\admin\Desktop\Happy Panchal\Core\Day_2\RestaurantTableReservation\RestaurantTableReservation.DataTransferObject\obj\Debug\net8.0\RestaurantTableReservation.DataTransferObject.dll
+C:\Users\admin\Desktop\Happy Panchal\Core\Day_2\RestaurantTableReservation\RestaurantTableReservation.DataTransferObject\obj\Debug\net8.0\refint\RestaurantTableReservation.DataTransferObject.dll
+C:\Users\admin\Desktop\Happy Panchal\Core\Day_2\RestaurantTableReservation\RestaurantTableReservation.DataTransferObject\obj\Debug\net8.0\RestaurantTableReservation.DataTransferObject.pdb
+C:\Users\admin\Desktop\Happy Panchal\Core\Day_2\RestaurantTableReservation\RestaurantTableReservation.DataTransferObject\obj\Debug\net8.0\ref\RestaurantTableReservation.DataTransferObject.dll
+C:\Users\singh\Downloads\Arshdeep Singh Core Test\RestaurantTableReservation\RestaurantTableReservation.DataTransferObject\bin\Debug\net8.0\RestaurantTableReservation.DataTransferObject.deps.json
+C:\Users\singh\Downloads\Arshdeep Singh Core Test\RestaurantTableReservation\RestaurantTableReservation.DataTransferObject\bin\Debug\net8.0\RestaurantTableReservation.DataTransferObject.dll
+C:\Users\singh\Downloads\Arshdeep Singh Core Test\RestaurantTableReservation\RestaurantTableReservation.DataTransferObject\bin\Debug\net8.0\RestaurantTableReservation.DataTransferObject.pdb
+C:\Users\singh\Downloads\Arshdeep Singh Core Test\RestaurantTableReservation\RestaurantTableReservation.DataTransferObject\bin\Debug\net8.0\RestaurantTableReservation.DataAccessLayer.dll
+C:\Users\singh\Downloads\Arshdeep Singh Core Test\RestaurantTableReservation\RestaurantTableReservation.DataTransferObject\bin\Debug\net8.0\RestaurantTableReservation.DataAccessLayer.pdb
+C:\Users\singh\Downloads\Arshdeep Singh Core Test\RestaurantTableReservation\RestaurantTableReservation.DataTransferObject\obj\Debug\net8.0\RestaurantTableReservation.DataTransferObject.csproj.AssemblyReference.cache
+C:\Users\singh\Downloads\Arshdeep Singh Core Test\RestaurantTableReservation\RestaurantTableReservation.DataTransferObject\obj\Debug\net8.0\RestaurantTableReservation.DataTransferObject.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\singh\Downloads\Arshdeep Singh Core Test\RestaurantTableReservation\RestaurantTableReservation.DataTransferObject\obj\Debug\net8.0\RestaurantTableReservation.DataTransferObject.AssemblyInfoInputs.cache
+C:\Users\singh\Downloads\Arshdeep Singh Core Test\RestaurantTableReservation\RestaurantTableReservation.DataTransferObject\obj\Debug\net8.0\RestaurantTableReservation.DataTransferObject.AssemblyInfo.cs
+C:\Users\singh\Downloads\Arshdeep Singh Core Test\RestaurantTableReservation\RestaurantTableReservation.DataTransferObject\obj\Debug\net8.0\RestaurantTableReservation.DataTransferObject.csproj.CoreCompileInputs.cache
+C:\Users\singh\Downloads\Arshdeep Singh Core Test\RestaurantTableReservation\RestaurantTableReservation.DataTransferObject\obj\Debug\net8.0\Restaura.274C0FB5.Up2Date
+C:\Users\singh\Downloads\Arshdeep Singh Core Test\RestaurantTableReservation\RestaurantTableReservation.DataTransferObject\obj\Debug\net8.0\RestaurantTableReservation.DataTransferObject.dll
+C:\Users\singh\Downloads\Arshdeep Singh Core Test\RestaurantTableReservation\RestaurantTableReservation.DataTransferObject\obj\Debug\net8.0\refint\RestaurantTableReservation.DataTransferObject.dll
+C:\Users\singh\Downloads\Arshdeep Singh Core Test\RestaurantTableReservation\RestaurantTableReservation.DataTransferObject\obj\Debug\net8.0\RestaurantTableReservation.DataTransferObject.pdb
+C:\Users\singh\Downloads\Arshdeep Singh Core Test\RestaurantTableReservation\RestaurantTableReservation.DataTransferObject\obj\Debug\net8.0\ref\RestaurantTableReservation.DataTransferObject.dll

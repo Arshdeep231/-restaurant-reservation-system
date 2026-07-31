@@ -1,0 +1,20 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.1" />
+    <PackageReference Include="Microsoft.Extensions.Identity.Core" Version="8.0.19" />
+    <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="8.14.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\RestaurantTableReservation.DataAccessLayer\RestaurantTableReservation.DataAccessLayer.csproj" />
+    <ProjectReference Include="..\RestaurantTableReservation.DataTransferObject\RestaurantTableReservation.DataTransferObject.csproj" />
+  </ItemGroup>
+
+</Project>

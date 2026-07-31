@@ -1,0 +1,47 @@
+﻿@model RestaurantTableReservation.DataTransferObject.LoginDto
+
+@{
+    ViewData["Title"] = "Sign in";
+}
+
+<div class="auth-shell">
+    <aside class="auth-visual">
+        <div class="auth-visual-inner">
+            <p class="page-eyebrow" style="color:var(--brass-soft);">Fine dining · Reserved seating</p>
+            <h1 class="auth-brand">Maison<span>.</span></h1>
+            <p class="auth-lead">Reserve your table with quiet confidence — evenings shaped around hospitality.</p>
+        </div>
+    </aside>
+
+    <section class="auth-panel">
+        <div class="auth-card">
+            <p class="page-eyebrow">Welcome back</p>
+            <h1>Sign in</h1>
+            <p class="auth-sub">Approved guests and administrators only.</p>
+
+            <form asp-action="Login" method="post">
+                <div asp-validation-summary="ModelOnly" class="text-danger mb-2"></div>
+                <div class="form-group">
+                    <label asp-for="Email">Email</label>
+                    <input asp-for="Email" class="form-control" type="email" placeholder="you@email.com" autocomplete="username" />
+                    <span asp-validation-for="Email" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Password">Password</label>
+                    <input asp-for="Password" class="form-control" type="password" placeholder="••••••••" autocomplete="current-password" />
+                    <span asp-validation-for="Password" class="text-danger"></span>
+                </div>
+                <button type="submit" class="btn btn-primary">Sign in</button>
+            </form>
+
+            <p class="auth-switch">
+                New guest?
+                <a asp-action="Register">Create an account</a>
+            </p>
+        </div>
+    </section>
+</div>
+
+@section Scripts {
+    @{ await Html.RenderPartialAsync("_ValidationScriptsPartial"); }
+}

@@ -1,0 +1,127 @@
+﻿@using Newtonsoft.Json
+@using System.Security.Claims
+@{
+    var controller = ViewContext.RouteData.Values["controller"]?.ToString()?.ToLower();
+    var action = ViewContext.RouteData.Values["action"]?.ToString()?.ToLower();
+    var isAuthPage = controller == "account" && (action == "login" || action == "register");
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] · Maison</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/RestaurantTableReservationMVC.styles.css" asp-append-version="true" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" rel="stylesheet" />
+</head>
+<body class="@(isAuthPage ? "auth-body" : "app-shell")">
+@if (!isAuthPage)
+{
+    <header class="site-header">
+        <nav class="site-nav">
+            <a class="brand" asp-controller="@(User.IsInRole("admin") ? "Admin" : "Customer")" asp-action="Index">
+                <span class="brand-mark">M</span>
+                <span>
+                    <span class="brand-name">Maison</span>
+                    <span class="brand-tag">Table Reservation</span>
+                </span>
+            </a>
+
+            <button class="nav-toggle" type="button" aria-label="Toggle navigation" id="navToggleBtn">
+                <span></span><span></span><span></span>
+            </button>
+
+            <div class="nav-collapse" id="navCollapse">
+                <ul class="nav-links">
+                @if (User.Identity?.IsAuthenticated == true)
+                {
+                    if (User.IsInRole("admin"))
+                    {
+                        <li><a class="@(controller == "admin" && action == "index" ? "active" : "")" asp-controller="Admin" asp-action="Index">Tables</a></li>
+                        <li><a class="@(action == "pendinguser" || action == "customers" ? "active" : "")" asp-controller="Admin" asp-action="PendingUser">Customers</a></li>
+                        <li><a class="@(action == "reservations" ? "active" : "")" asp-controller="Admin" asp-action="Reservations">Reservations</a></li>
+                    }
+                    else
+                    {
+                        <li><a class="@(controller == "customer" && action == "index" ? "active" : "")" asp-controller="Customer" asp-action="Index">Available Tables</a></li>
+                        <li><a class="@(action == "myreservations" ? "active" : "")" asp-controller="Customer" asp-action="MyReservations">My Reservations</a></li>
+                    }
+                }
+                </ul>
+                <ul class="nav-actions">
+                @if (User.Identity?.IsAuthenticated != true)
+                {
+                    <li><a class="btn btn-ghost btn-sm" asp-controller="Account" asp-action="Login">Sign in</a></li>
+                    <li><a class="btn btn-primary btn-sm" asp-controller="Account" asp-action="Register">Join</a></li>
+                }
+                else
+                {
+                    <li class="nav-user">@(User.Identity?.Name ?? "Guest")</li>
+                    <li><a class="btn btn-outline-ink btn-sm" asp-controller="Account" asp-action="Logout">Sign out</a></li>
+                }
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <div class="main-wrap">
+        <main role="main">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="site-footer">
+        <div>&copy; @DateTime.Now.Year Maison · Restaurant Table Reservation</div>
+    </footer>
+}
+else
+{
+    @RenderBody()
+}
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <script>
+        toastr.options = {
+            closeButton: true,
+            progressBar: true,
+            positionClass: "toast-top-right",
+            timeOut: 3500
+        };
+    </script>
+@if (TempData["success"] != null)
+{
+    <script>
+        $(function () {
+            toastr.success(@Html.Raw(JsonConvert.SerializeObject(TempData["success"])));
+        });
+    </script>
+}
+@if (TempData["error"] != null)
+{
+    <script>
+        $(function () {
+            toastr.error(@Html.Raw(JsonConvert.SerializeObject(TempData["error"])));
+        });
+    </script>
+}
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    <script>
+        (function () {
+            var btn = document.getElementById('navToggleBtn');
+            var el = document.getElementById('navCollapse');
+            if (!btn || !el) return;
+            btn.addEventListener('click', function () {
+                el.classList.toggle('open');
+            });
+        })();
+    </script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

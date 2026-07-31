@@ -1,0 +1,160 @@
+﻿@model List<RestaurantTableReservation.DataTransferObject.ModalReservationDto>
+@{
+    ViewData["Title"] = "My Reservations";
+    var minDate = DateTime.Now.ToString("yyyy-MM-dd");
+}
+
+<div class="page-hero">
+    <p class="page-eyebrow">Your bookings</p>
+    <h1 class="page-title">My reservations</h1>
+    <p class="page-sub">Edit details or cancel a booking. Changes must keep the slot free and within capacity.</p>
+</div>
+
+@if (Model == null || !Model.Any())
+{
+    <div class="empty-state panel">
+        <h3>No reservations yet</h3>
+        <p>Browse available tables and book your first evening with us.</p>
+        <a class="btn btn-primary mt-3" asp-controller="Customer" asp-action="Index">Browse tables</a>
+    </div>
+}
+else
+{
+    <div class="table-grid">
+    @foreach (var item in Model)
+    {
+        var date = item.ReservationDate.ToString("dd MMM yyyy");
+        var time = item.StartTime.ToString("HH:mm") + " – " + item.EndTime.ToString("HH:mm");
+        var createDate = item.CreateAt.ToString("dd MMM yyyy");
+        <article class="res-card">
+            <div class="res-card-id">Reservation · @item.Id</div>
+            <h3 class="res-card-title">Table @item.Table?.TableNumber</h3>
+            <div class="res-card-rows">
+                <div>Guests · <span>@item.NumberOfGuest</span></div>
+                <div>Date &amp; time · <span>@date · @time</span></div>
+                <div>Created · <span>@createDate</span></div>
+            </div>
+            <div class="res-card-actions">
+                <button class="btn btn-outline-warning btn-sm" type="button" onclick="editBtn('@item.Id')">Edit</button>
+                <button class="btn btn-outline-danger btn-sm" type="button" onclick="deleteBtn('@item.Id')">Cancel</button>
+            </div>
+        </article>
+    }
+    </div>
+}
+
+<div class="modal fade" id="editModel" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="editModelLabel">Edit reservation</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form asp-action="Update" id="editForm" method="post">
+                    <input type="hidden" name="Id" id="EditId" />
+                    <input type="hidden" name="TableId" id="EditTableId" />
+                    <input type="hidden" name="CustomerId" id="EditCustomerId" />
+                    <input type="hidden" name="CreateAt" id="EditCreateAt" />
+                    <div class="form-group">
+                        <label>Table number</label>
+                        <input id="EditTableNumber" class="form-control" readonly />
+                    </div>
+                    <div class="form-group">
+                        <label for="EditReservationDate">Reservation date</label>
+                        <input type="date" name="ReservationDate" id="EditReservationDate" class="form-control" min="@minDate" />
+                    </div>
+                    <div class="form-group">
+                        <label for="EditStartTime">Start time</label>
+                        <input type="time" name="StartTime" id="EditStartTime" class="form-control" />
+                    </div>
+                    <div class="form-group">
+                        <label for="EditEndTime">End time</label>
+                        <input type="time" name="EndTime" id="EditEndTime" class="form-control" />
+                    </div>
+                    <div class="form-group">
+                        <label for="EditNumberOfGuest">Number of guests</label>
+                        <input type="number" name="NumberOfGuest" id="EditNumberOfGuest" class="form-control" min="1" />
+                    </div>
+                    <div class="modal-footer mt-2 px-0 pb-0">
+                        <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="submit" class="btn btn-primary">Save changes</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="deletedModel" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5">Cancel reservation</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                Are you sure you want to cancel this reservation? This cannot be undone.
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Keep reservation</button>
+                <button type="button" class="btn btn-outline-danger" onclick="confirmDelete()">Cancel reservation</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+<script>
+    var deletedId = null;
+
+    function deleteBtn(id) {
+        deletedId = id;
+        $("#deletedModel").modal("show");
+    }
+
+    function confirmDelete() {
+        $.get("/customer/Delete/" + deletedId, function () {
+            window.location.reload();
+        });
+    }
+
+    function toDateInput(value) {
+        if (!value) return "";
+        var d = new Date(value);
+        if (isNaN(d)) return (value + "").substring(0, 10);
+        var m = (d.getMonth() + 1).toString().padStart(2, "0");
+        var day = d.getDate().toString().padStart(2, "0");
+        return d.getFullYear() + "-" + m + "-" + day;
+    }
+
+    function toTimeInput(value) {
+        if (!value) return "";
+        var d = new Date(value);
+        if (isNaN(d)) {
+            var parts = (value + "").split("T");
+            if (parts.length > 1) return parts[1].substring(0, 5);
+            return (value + "").substring(0, 5);
+        }
+        return d.getHours().toString().padStart(2, "0") + ":" + d.getMinutes().toString().padStart(2, "0");
+    }
+
+    function editBtn(id) {
+        $.get("/customer/getresevationbyid/" + id, function (data) {
+            $("#EditId").val(data.id);
+            $("#EditTableId").val(data.tableId);
+            $("#EditCustomerId").val(data.customerId);
+            $("#EditCreateAt").val(data.createAt);
+            $("#EditTableNumber").val(data.table ? data.table.tableNumber : "");
+            $("#EditReservationDate").val(toDateInput(data.reservationDate));
+            $("#EditStartTime").val(toTimeInput(data.startTime));
+            $("#EditEndTime").val(toTimeInput(data.endTime));
+            $("#EditNumberOfGuest").val(data.numberOfGuest);
+            if (data.table && data.table.capacity) {
+                $("#EditNumberOfGuest").prop("max", data.table.capacity);
+            }
+            $("#editModel").modal("show");
+        });
+    }
+</script>
+}

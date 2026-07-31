@@ -1,0 +1,34 @@
+C:\Users\admin\Desktop\Happy Panchal\Core\Day_2\RestaurantTableReservation\RestaurantTableReservation.BusinessAccessLayer\bin\Debug\net8.0\RestaurantTableReservation.BusinessAccessLayer.deps.json
+C:\Users\admin\Desktop\Happy Panchal\Core\Day_2\RestaurantTableReservation\RestaurantTableReservation.BusinessAccessLayer\bin\Debug\net8.0\RestaurantTableReservation.BusinessAccessLayer.dll
+C:\Users\admin\Desktop\Happy Panchal\Core\Day_2\RestaurantTableReservation\RestaurantTableReservation.BusinessAccessLayer\bin\Debug\net8.0\RestaurantTableReservation.BusinessAccessLayer.pdb
+C:\Users\admin\Desktop\Happy Panchal\Core\Day_2\RestaurantTableReservation\RestaurantTableReservation.BusinessAccessLayer\bin\Debug\net8.0\RestaurantTableReservation.DataAccessLayer.dll
+C:\Users\admin\Desktop\Happy Panchal\Core\Day_2\RestaurantTableReservation\RestaurantTableReservation.BusinessAccessLayer\bin\Debug\net8.0\RestaurantTableReservation.DataTransferObject.dll
+C:\Users\admin\Desktop\Happy Panchal\Core\Day_2\RestaurantTableReservation\RestaurantTableReservation.BusinessAccessLayer\bin\Debug\net8.0\RestaurantTableReservation.DataAccessLayer.pdb
+C:\Users\admin\Desktop\Happy Panchal\Core\Day_2\RestaurantTableReservation\RestaurantTableReservation.BusinessAccessLayer\bin\Debug\net8.0\RestaurantTableReservation.DataTransferObject.pdb
+C:\Users\admin\Desktop\Happy Panchal\Core\Day_2\RestaurantTableReservation\RestaurantTableReservation.BusinessAccessLayer\obj\Debug\net8.0\RestaurantTableReservation.BusinessAccessLayer.csproj.AssemblyReference.cache
+C:\Users\admin\Desktop\Happy Panchal\Core\Day_2\RestaurantTableReservation\RestaurantTableReservation.BusinessAccessLayer\obj\Debug\net8.0\RestaurantTableReservation.BusinessAccessLayer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\admin\Desktop\Happy Panchal\Core\Day_2\RestaurantTableReservation\RestaurantTableReservation.BusinessAccessLayer\obj\Debug\net8.0\RestaurantTableReservation.BusinessAccessLayer.AssemblyInfoInputs.cache
+C:\Users\admin\Desktop\Happy Panchal\Core\Day_2\RestaurantTableReservation\RestaurantTableReservation.BusinessAccessLayer\obj\Debug\net8.0\RestaurantTableReservation.BusinessAccessLayer.AssemblyInfo.cs
+C:\Users\admin\Desktop\Happy Panchal\Core\Day_2\RestaurantTableReservation\RestaurantTableReservation.BusinessAccessLayer\obj\Debug\net8.0\RestaurantTableReservation.BusinessAccessLayer.csproj.CoreCompileInputs.cache
+C:\Users\admin\Desktop\Happy Panchal\Core\Day_2\RestaurantTableReservation\RestaurantTableReservation.BusinessAccessLayer\obj\Debug\net8.0\Restaura.0FE14DAC.Up2Date
+C:\Users\admin\Desktop\Happy Panchal\Core\Day_2\RestaurantTableReservation\RestaurantTableReservation.BusinessAccessLayer\obj\Debug\net8.0\RestaurantTableReservation.BusinessAccessLayer.dll
+C:\Users\admin\Desktop\Happy Panchal\Core\Day_2\RestaurantTableReservation\RestaurantTableReservation.BusinessAccessLayer\obj\Debug\net8.0\refint\RestaurantTableReservation.BusinessAccessLayer.dll
+C:\Users\admin\Desktop\Happy Panchal\Core\Day_2\RestaurantTableReservation\RestaurantTableReservation.BusinessAccessLayer\obj\Debug\net8.0\RestaurantTableReservation.BusinessAccessLayer.pdb
+C:\Users\admin\Desktop\Happy Panchal\Core\Day_2\RestaurantTableReservation\RestaurantTableReservation.BusinessAccessLayer\obj\Debug\net8.0\ref\RestaurantTableReservation.BusinessAccessLayer.dll
+C:\Users\singh\Downloads\Arshdeep Singh Core Test\RestaurantTableReservation\RestaurantTableReservation.BusinessAccessLayer\bin\Debug\net8.0\RestaurantTableReservation.BusinessAccessLayer.deps.json
+C:\Users\singh\Downloads\Arshdeep Singh Core Test\RestaurantTableReservation\RestaurantTableReservation.BusinessAccessLayer\bin\Debug\net8.0\RestaurantTableReservation.BusinessAccessLayer.dll
+C:\Users\singh\Downloads\Arshdeep Singh Core Test\RestaurantTableReservation\RestaurantTableReservation.BusinessAccessLayer\bin\Debug\net8.0\RestaurantTableReservation.BusinessAccessLayer.pdb
+C:\Users\singh\Downloads\Arshdeep Singh Core Test\RestaurantTableReservation\RestaurantTableReservation.BusinessAccessLayer\bin\Debug\net8.0\RestaurantTableReservation.DataAccessLayer.dll
+C:\Users\singh\Downloads\Arshdeep Singh Core Test\RestaurantTableReservation\RestaurantTableReservation.BusinessAccessLayer\bin\Debug\net8.0\RestaurantTableReservation.DataTransferObject.dll
+C:\Users\singh\Downloads\Arshdeep Singh Core Test\RestaurantTableReservation\RestaurantTableReservation.BusinessAccessLayer\bin\Debug\net8.0\RestaurantTableReservation.DataAccessLayer.pdb
+C:\Users\singh\Downloads\Arshdeep Singh Core Test\RestaurantTableReservation\RestaurantTableReservation.BusinessAccessLayer\bin\Debug\net8.0\RestaurantTableReservation.DataTransferObject.pdb
+C:\Users\singh\Downloads\Arshdeep Singh Core Test\RestaurantTableReservation\RestaurantTableReservation.BusinessAccessLayer\obj\Debug\net8.0\RestaurantTableReservation.BusinessAccessLayer.csproj.AssemblyReference.cache
+C:\Users\singh\Downloads\Arshdeep Singh Core Test\RestaurantTableReservation\RestaurantTableReservation.BusinessAccessLayer\obj\Debug\net8.0\RestaurantTableReservation.BusinessAccessLayer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\singh\Downloads\Arshdeep Singh Core Test\RestaurantTableReservation\RestaurantTableReservation.BusinessAccessLayer\obj\Debug\net8.0\RestaurantTableReservation.BusinessAccessLayer.AssemblyInfoInputs.cache
+C:\Users\singh\Downloads\Arshdeep Singh Core Test\RestaurantTableReservation\RestaurantTableReservation.BusinessAccessLayer\obj\Debug\net8.0\RestaurantTableReservation.BusinessAccessLayer.AssemblyInfo.cs
+C:\Users\singh\Downloads\Arshdeep Singh Core Test\RestaurantTableReservation\RestaurantTableReservation.BusinessAccessLayer\obj\Debug\net8.0\RestaurantTableReservation.BusinessAccessLayer.csproj.CoreCompileInputs.cache
+C:\Users\singh\Downloads\Arshdeep Singh Core Test\RestaurantTableReservation\RestaurantTableReservation.BusinessAccessLayer\obj\Debug\net8.0\Restaura.0FE14DAC.Up2Date
+C:\Users\singh\Downloads\Arshdeep Singh Core Test\RestaurantTableReservation\RestaurantTableReservation.BusinessAccessLayer\obj\Debug\net8.0\RestaurantTableReservation.BusinessAccessLayer.dll
+C:\Users\singh\Downloads\Arshdeep Singh Core Test\RestaurantTableReservation\RestaurantTableReservation.BusinessAccessLayer\obj\Debug\net8.0\refint\RestaurantTableReservation.BusinessAccessLayer.dll
+C:\Users\singh\Downloads\Arshdeep Singh Core Test\RestaurantTableReservation\RestaurantTableReservation.BusinessAccessLayer\obj\Debug\net8.0\RestaurantTableReservation.BusinessAccessLayer.pdb
+C:\Users\singh\Downloads\Arshdeep Singh Core Test\RestaurantTableReservation\RestaurantTableReservation.BusinessAccessLayer\obj\Debug\net8.0\ref\RestaurantTableReservation.BusinessAccessLayer.dll
