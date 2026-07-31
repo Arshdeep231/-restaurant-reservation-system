@@ -4425,11 +4425,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\singh\\Downloads\\Arshdeep Singh Core Test\\RestaurantTableReservation\\RestaurantTableReservation.DataAccessLayer\\RestaurantTableReservation.DataAccessLayer.csproj",
+      "projectUniqueName": "C:\\Users\\singh\\source\\repos\\-restaurant-reservation-system\\RestaurantTableReservation.DataAccessLayer\\RestaurantTableReservation.DataAccessLayer.csproj",
       "projectName": "RestaurantTableReservation.DataAccessLayer",
-      "projectPath": "C:\\Users\\singh\\Downloads\\Arshdeep Singh Core Test\\RestaurantTableReservation\\RestaurantTableReservation.DataAccessLayer\\RestaurantTableReservation.DataAccessLayer.csproj",
+      "projectPath": "C:\\Users\\singh\\source\\repos\\-restaurant-reservation-system\\RestaurantTableReservation.DataAccessLayer\\RestaurantTableReservation.DataAccessLayer.csproj",
       "packagesPath": "C:\\Users\\singh\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\singh\\Downloads\\Arshdeep Singh Core Test\\RestaurantTableReservation\\RestaurantTableReservation.DataAccessLayer\\obj\\",
+      "outputPath": "C:\\Users\\singh\\source\\repos\\-restaurant-reservation-system\\RestaurantTableReservation.DataAccessLayer\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

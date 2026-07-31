@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("RestaurantTableReservation.BusinessAccessLayer")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+94f551a424cf84fd56638835ad7b207d25c70b16")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a526b7852b6041b83a32fa4e7a91045f27d72e19")]
 [assembly: System.Reflection.AssemblyProductAttribute("RestaurantTableReservation.BusinessAccessLayer")]
 [assembly: System.Reflection.AssemblyTitleAttribute("RestaurantTableReservation.BusinessAccessLayer")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

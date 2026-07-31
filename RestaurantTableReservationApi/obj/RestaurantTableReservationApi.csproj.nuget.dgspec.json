@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\singh\\Downloads\\Arshdeep Singh Core Test\\RestaurantTableReservation\\RestaurantTableReservationApi\\RestaurantTableReservationApi.csproj": {}
+    "C:\\Users\\singh\\source\\repos\\-restaurant-reservation-system\\RestaurantTableReservationApi\\RestaurantTableReservationApi.csproj": {}
   },
   "projects": {
-    "C:\\Users\\singh\\Downloads\\Arshdeep Singh Core Test\\RestaurantTableReservation\\RestaurantTableReservation.BusinessAccessLayer\\RestaurantTableReservation.BusinessAccessLayer.csproj": {
+    "C:\\Users\\singh\\source\\repos\\-restaurant-reservation-system\\RestaurantTableReservation.BusinessAccessLayer\\RestaurantTableReservation.BusinessAccessLayer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\singh\\Downloads\\Arshdeep Singh Core Test\\RestaurantTableReservation\\RestaurantTableReservation.BusinessAccessLayer\\RestaurantTableReservation.BusinessAccessLayer.csproj",
+        "projectUniqueName": "C:\\Users\\singh\\source\\repos\\-restaurant-reservation-system\\RestaurantTableReservation.BusinessAccessLayer\\RestaurantTableReservation.BusinessAccessLayer.csproj",
         "projectName": "RestaurantTableReservation.BusinessAccessLayer",
-        "projectPath": "C:\\Users\\singh\\Downloads\\Arshdeep Singh Core Test\\RestaurantTableReservation\\RestaurantTableReservation.BusinessAccessLayer\\RestaurantTableReservation.BusinessAccessLayer.csproj",
+        "projectPath": "C:\\Users\\singh\\source\\repos\\-restaurant-reservation-system\\RestaurantTableReservation.BusinessAccessLayer\\RestaurantTableReservation.BusinessAccessLayer.csproj",
         "packagesPath": "C:\\Users\\singh\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\singh\\Downloads\\Arshdeep Singh Core Test\\RestaurantTableReservation\\RestaurantTableReservation.BusinessAccessLayer\\obj\\",
+        "outputPath": "C:\\Users\\singh\\source\\repos\\-restaurant-reservation-system\\RestaurantTableReservation.BusinessAccessLayer\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -33,11 +33,11 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\singh\\Downloads\\Arshdeep Singh Core Test\\RestaurantTableReservation\\RestaurantTableReservation.DataAccessLayer\\RestaurantTableReservation.DataAccessLayer.csproj": {
-                "projectPath": "C:\\Users\\singh\\Downloads\\Arshdeep Singh Core Test\\RestaurantTableReservation\\RestaurantTableReservation.DataAccessLayer\\RestaurantTableReservation.DataAccessLayer.csproj"
+              "C:\\Users\\singh\\source\\repos\\-restaurant-reservation-system\\RestaurantTableReservation.DataAccessLayer\\RestaurantTableReservation.DataAccessLayer.csproj": {
+                "projectPath": "C:\\Users\\singh\\source\\repos\\-restaurant-reservation-system\\RestaurantTableReservation.DataAccessLayer\\RestaurantTableReservation.DataAccessLayer.csproj"
               },
-              "C:\\Users\\singh\\Downloads\\Arshdeep Singh Core Test\\RestaurantTableReservation\\RestaurantTableReservation.DataTransferObject\\RestaurantTableReservation.DataTransferObject.csproj": {
-                "projectPath": "C:\\Users\\singh\\Downloads\\Arshdeep Singh Core Test\\RestaurantTableReservation\\RestaurantTableReservation.DataTransferObject\\RestaurantTableReservation.DataTransferObject.csproj"
+              "C:\\Users\\singh\\source\\repos\\-restaurant-reservation-system\\RestaurantTableReservation.DataTransferObject\\RestaurantTableReservation.DataTransferObject.csproj": {
+                "projectPath": "C:\\Users\\singh\\source\\repos\\-restaurant-reservation-system\\RestaurantTableReservation.DataTransferObject\\RestaurantTableReservation.DataTransferObject.csproj"
               }
             }
           }
@@ -91,14 +91,14 @@
         }
       }
     },
-    "C:\\Users\\singh\\Downloads\\Arshdeep Singh Core Test\\RestaurantTableReservation\\RestaurantTableReservation.DataAccessLayer\\RestaurantTableReservation.DataAccessLayer.csproj": {
+    "C:\\Users\\singh\\source\\repos\\-restaurant-reservation-system\\RestaurantTableReservation.DataAccessLayer\\RestaurantTableReservation.DataAccessLayer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\singh\\Downloads\\Arshdeep Singh Core Test\\RestaurantTableReservation\\RestaurantTableReservation.DataAccessLayer\\RestaurantTableReservation.DataAccessLayer.csproj",
+        "projectUniqueName": "C:\\Users\\singh\\source\\repos\\-restaurant-reservation-system\\RestaurantTableReservation.DataAccessLayer\\RestaurantTableReservation.DataAccessLayer.csproj",
         "projectName": "RestaurantTableReservation.DataAccessLayer",
-        "projectPath": "C:\\Users\\singh\\Downloads\\Arshdeep Singh Core Test\\RestaurantTableReservation\\RestaurantTableReservation.DataAccessLayer\\RestaurantTableReservation.DataAccessLayer.csproj",
+        "projectPath": "C:\\Users\\singh\\source\\repos\\-restaurant-reservation-system\\RestaurantTableReservation.DataAccessLayer\\RestaurantTableReservation.DataAccessLayer.csproj",
         "packagesPath": "C:\\Users\\singh\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\singh\\Downloads\\Arshdeep Singh Core Test\\RestaurantTableReservation\\RestaurantTableReservation.DataAccessLayer\\obj\\",
+        "outputPath": "C:\\Users\\singh\\source\\repos\\-restaurant-reservation-system\\RestaurantTableReservation.DataAccessLayer\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -187,14 +187,14 @@
         }
       }
     },
-    "C:\\Users\\singh\\Downloads\\Arshdeep Singh Core Test\\RestaurantTableReservation\\RestaurantTableReservation.DataTransferObject\\RestaurantTableReservation.DataTransferObject.csproj": {
+    "C:\\Users\\singh\\source\\repos\\-restaurant-reservation-system\\RestaurantTableReservation.DataTransferObject\\RestaurantTableReservation.DataTransferObject.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\singh\\Downloads\\Arshdeep Singh Core Test\\RestaurantTableReservation\\RestaurantTableReservation.DataTransferObject\\RestaurantTableReservation.DataTransferObject.csproj",
+        "projectUniqueName": "C:\\Users\\singh\\source\\repos\\-restaurant-reservation-system\\RestaurantTableReservation.DataTransferObject\\RestaurantTableReservation.DataTransferObject.csproj",
         "projectName": "RestaurantTableReservation.DataTransferObject",
-        "projectPath": "C:\\Users\\singh\\Downloads\\Arshdeep Singh Core Test\\RestaurantTableReservation\\RestaurantTableReservation.DataTransferObject\\RestaurantTableReservation.DataTransferObject.csproj",
+        "projectPath": "C:\\Users\\singh\\source\\repos\\-restaurant-reservation-system\\RestaurantTableReservation.DataTransferObject\\RestaurantTableReservation.DataTransferObject.csproj",
         "packagesPath": "C:\\Users\\singh\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\singh\\Downloads\\Arshdeep Singh Core Test\\RestaurantTableReservation\\RestaurantTableReservation.DataTransferObject\\obj\\",
+        "outputPath": "C:\\Users\\singh\\source\\repos\\-restaurant-reservation-system\\RestaurantTableReservation.DataTransferObject\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -216,8 +216,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\singh\\Downloads\\Arshdeep Singh Core Test\\RestaurantTableReservation\\RestaurantTableReservation.DataAccessLayer\\RestaurantTableReservation.DataAccessLayer.csproj": {
-                "projectPath": "C:\\Users\\singh\\Downloads\\Arshdeep Singh Core Test\\RestaurantTableReservation\\RestaurantTableReservation.DataAccessLayer\\RestaurantTableReservation.DataAccessLayer.csproj"
+              "C:\\Users\\singh\\source\\repos\\-restaurant-reservation-system\\RestaurantTableReservation.DataAccessLayer\\RestaurantTableReservation.DataAccessLayer.csproj": {
+                "projectPath": "C:\\Users\\singh\\source\\repos\\-restaurant-reservation-system\\RestaurantTableReservation.DataAccessLayer\\RestaurantTableReservation.DataAccessLayer.csproj"
               }
             }
           }
@@ -263,14 +263,14 @@
         }
       }
     },
-    "C:\\Users\\singh\\Downloads\\Arshdeep Singh Core Test\\RestaurantTableReservation\\RestaurantTableReservationApi\\RestaurantTableReservationApi.csproj": {
+    "C:\\Users\\singh\\source\\repos\\-restaurant-reservation-system\\RestaurantTableReservationApi\\RestaurantTableReservationApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\singh\\Downloads\\Arshdeep Singh Core Test\\RestaurantTableReservation\\RestaurantTableReservationApi\\RestaurantTableReservationApi.csproj",
+        "projectUniqueName": "C:\\Users\\singh\\source\\repos\\-restaurant-reservation-system\\RestaurantTableReservationApi\\RestaurantTableReservationApi.csproj",
         "projectName": "RestaurantTableReservationApi",
-        "projectPath": "C:\\Users\\singh\\Downloads\\Arshdeep Singh Core Test\\RestaurantTableReservation\\RestaurantTableReservationApi\\RestaurantTableReservationApi.csproj",
+        "projectPath": "C:\\Users\\singh\\source\\repos\\-restaurant-reservation-system\\RestaurantTableReservationApi\\RestaurantTableReservationApi.csproj",
         "packagesPath": "C:\\Users\\singh\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\singh\\Downloads\\Arshdeep Singh Core Test\\RestaurantTableReservation\\RestaurantTableReservationApi\\obj\\",
+        "outputPath": "C:\\Users\\singh\\source\\repos\\-restaurant-reservation-system\\RestaurantTableReservationApi\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -292,11 +292,11 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\singh\\Downloads\\Arshdeep Singh Core Test\\RestaurantTableReservation\\RestaurantTableReservation.BusinessAccessLayer\\RestaurantTableReservation.BusinessAccessLayer.csproj": {
-                "projectPath": "C:\\Users\\singh\\Downloads\\Arshdeep Singh Core Test\\RestaurantTableReservation\\RestaurantTableReservation.BusinessAccessLayer\\RestaurantTableReservation.BusinessAccessLayer.csproj"
+              "C:\\Users\\singh\\source\\repos\\-restaurant-reservation-system\\RestaurantTableReservation.BusinessAccessLayer\\RestaurantTableReservation.BusinessAccessLayer.csproj": {
+                "projectPath": "C:\\Users\\singh\\source\\repos\\-restaurant-reservation-system\\RestaurantTableReservation.BusinessAccessLayer\\RestaurantTableReservation.BusinessAccessLayer.csproj"
               },
-              "C:\\Users\\singh\\Downloads\\Arshdeep Singh Core Test\\RestaurantTableReservation\\RestaurantTableReservation.DataAccessLayer\\RestaurantTableReservation.DataAccessLayer.csproj": {
-                "projectPath": "C:\\Users\\singh\\Downloads\\Arshdeep Singh Core Test\\RestaurantTableReservation\\RestaurantTableReservation.DataAccessLayer\\RestaurantTableReservation.DataAccessLayer.csproj"
+              "C:\\Users\\singh\\source\\repos\\-restaurant-reservation-system\\RestaurantTableReservation.DataAccessLayer\\RestaurantTableReservation.DataAccessLayer.csproj": {
+                "projectPath": "C:\\Users\\singh\\source\\repos\\-restaurant-reservation-system\\RestaurantTableReservation.DataAccessLayer\\RestaurantTableReservation.DataAccessLayer.csproj"
               }
             }
           }
